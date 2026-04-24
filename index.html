@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalletWise | Premium Expense Tracker</title>
+    <meta name="description" content="Manage your finances with style. Track income and expenses in real-time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <div class="brand">
+                <span class="brand-icon">💎</span>
+                <h1>WalletWise</h1>
+            </div>
+            <div class="balance-card glass">
+                <p>Total Balance</p>
+                <h2 id="total-balance">₹0.00</h2>
+            </div>
+        </header>
+
+        <section class="summary-grid">
+            <div class="summary-box glass income">
+                <div class="icon-circle"><i class="fas fa-arrow-down"></i></div>
+                <div class="info">
+                    <p>Income</p>
+                    <h3 id="total-income">+₹0.00</h3>
+                </div>
+            </div>
+            <div class="summary-box glass expense">
+                <div class="icon-circle"><i class="fas fa-arrow-up"></i></div>
+                <div class="info">
+                    <p>Expense</p>
+                    <h3 id="total-expense">-₹0.00</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-transaction glass">
+            <h3>New Transaction</h3>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" id="description" placeholder="e.g. Salary, Groceries" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="number" id="amount" placeholder="0.00" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="primary-btn">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="history-section">
+            <div class="section-header">
+                <h3>Transactions</h3>
+                <span class="count" id="item-count">0 items</span>
+            </div>
+            <div class="transaction-list" id="transaction-list">
+                <!-- Transactions will be loaded here -->
+                <div class="loading-msg">Loading transactions...</div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
