@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--rd-dark);
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
