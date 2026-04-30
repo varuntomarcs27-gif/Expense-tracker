@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--rd-dark);
+    background-color: light_blue;
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
